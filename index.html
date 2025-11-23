@@ -17,33 +17,45 @@
             color: #333;
         }
 
-
-
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #006937 0%, #004d27 100%);
             color: white;
-            padding: 6rem 5%;
+            padding: 4rem 5%;
             text-align: center;
         }
 
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
+        .hero img {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
         }
 
-        .hero .tagline {
-            font-size: 1.8rem;
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero .subheading {
+            font-size: 1.3rem;
             color: #D0AF21;
             margin-bottom: 2rem;
             font-weight: 600;
         }
 
+        .hero .mission {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
         .hero p {
             font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
+            max-width: 900px;
+            margin: 0 auto 2.5rem;
             line-height: 1.8;
         }
 
@@ -55,7 +67,7 @@
         }
 
         .btn {
-            padding: 1rem 2rem;
+            padding: 1rem 2.5rem;
             font-size: 1.1rem;
             border: none;
             border-radius: 5px;
@@ -87,46 +99,54 @@
             color: #006937;
         }
 
-        /* Section Styling */
-        section {
+        /* Secondary Tagline */
+        .tagline-section {
             padding: 4rem 5%;
+            text-align: center;
+            background: white;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        h2 {
+        .tagline-section h2 {
             color: #006937;
             font-size: 2.5rem;
-            margin-bottom: 1rem;
-            text-align: center;
+            margin-bottom: 1.5rem;
         }
 
-        .section-intro {
-            text-align: center;
+        .tagline-section p {
             font-size: 1.2rem;
-            color: #636569;
-            margin-bottom: 3rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Mission Section */
-        .mission {
-            background: #f9f9f9;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
+            line-height: 1.8;
+            color: #333;
             max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto 1rem;
         }
 
-        .stat-card {
+        /* Value Props Section */
+        .value-props {
+            background: #f9f9f9;
+            padding: 4rem 5%;
+        }
+
+        .value-props-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .value-props h2 {
+            color: #006937;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
             background: white;
             padding: 2rem;
             border-radius: 10px;
@@ -135,160 +155,110 @@
             border-top: 4px solid #D0AF21;
         }
 
-        .stat-number {
+        .value-icon {
             font-size: 3rem;
-            font-weight: 700;
+            margin-bottom: 1rem;
             color: #006937;
-            margin-bottom: 0.5rem;
         }
 
-        .stat-label {
+        .value-card h3 {
+            color: #006937;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .value-card p {
             color: #636569;
-            font-size: 1.1rem;
+            font-size: 1rem;
+            line-height: 1.6;
         }
 
-        /* How It Works */
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .step {
+        /* Why Sunrise Section */
+        .why-sunrise {
+            padding: 4rem 5%;
             background: white;
-            padding: 2rem;
+        }
+
+        .why-sunrise-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .why-sunrise h2 {
+            color: #006937;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .why-sunrise p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .why-sunrise .emphasis {
+            color: #D0AF21;
+            font-weight: 600;
+        }
+
+        /* Steps Section */
+        .steps-section {
+            background: #f9f9f9;
+            padding: 4rem 5%;
+        }
+
+        .steps-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .steps-section h2 {
+            color: #006937;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .step-card {
+            background: white;
+            padding: 2.5rem;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            position: relative;
+            text-align: center;
         }
 
-        .step-icon {
-            font-size: 2.1rem;
-            margin-bottom: 1rem;
-            color: #D0AF21;
+        .step-number {
+            background: #D0AF21;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
         }
 
-        .step h3 {
+        .step-card h3 {
             color: #006937;
-            margin: 0 0 1rem;
+            margin-bottom: 1rem;
             font-size: 1.5rem;
         }
 
-        /* Benefits */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .benefit-card {
-            background: #f9f9f9;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .benefit-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .benefit-card h3 {
-            color: #006937;
-            margin-bottom: 1rem;
-        }
-
-        /* Partners Section */
-        .partners {
-            background: linear-gradient(135deg, #006937 0%, #004d27 100%);
-            color: white;
-        }
-
-        .partners h2,
-        .partners .section-intro {
-            color: white;
-        }
-
-        .partner-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .partner-feature {
-            background: rgba(255,255,255,0.1);
-            padding: 2rem;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-        }
-
-        .partner-feature h3 {
-            color: #D0AF21;
-            margin-bottom: 1rem;
-        }
-
-        /* Team Section */
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .team-member {
-            text-align: center;
-            padding: 1.5rem;
-        }
-
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 1rem;
-            border: 4px solid #D0AF21;
-        }
-
-        .team-member h3 {
-            color: #006937;
-            margin-bottom: 0.5rem;
-        }
-
-        .team-member .title {
+        .step-card p {
             color: #636569;
-            font-style: italic;
-            margin-bottom: 1rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            background: #f9f9f9;
-            text-align: center;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .contact-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .contact-item i {
-            font-size: 2rem;
-            color: #006937;
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
 
         /* Footer */
@@ -302,24 +272,37 @@
         footer a {
             color: #D0AF21;
             text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
             
-            .hero .tagline {
-                font-size: 1.3rem;
+            .hero .mission {
+                font-size: 1.5rem;
+            }
+
+            .hero .subheading {
+                font-size: 1.1rem;
             }
 
             h2 {
                 font-size: 2rem;
             }
 
-            .stats-grid,
-            .steps {
+            .value-grid,
+            .steps-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -328,134 +311,94 @@
 <body>
     <!-- Hero Section -->
     <section class="hero">
-        <img src="logo.png" alt="Sunrise Financial" style="max-width: 500px; width: 100%; height: auto; margin-bottom: 2rem;">
-        <div class="tagline">Energy Savings for Every Family</div>
-        <p>We provide guaranteed energy savings through solar lease financing designed for working-class homeowners. No upfront costs, minimum 20% savings, powered by trusted local solar partners.</p>
+        <img src="logo.png" alt="Sunrise Financial">
+        <h1>Energy Savings for Every Family!</h1>
+        <div class="subheading">Affordable Solar • No Credit Check • No Upfront Cost • Guaranteed Savings</div>
+        <p class="mission">At Sunrise Financial, our mission is simple: Powering Savings. Financing the Future.</p>
+        <p>We bring truly affordable solar to real families — especially those who have been turned away by traditional lenders. If solar can save you money, you're approved.</p>
+        <div class="cta-buttons">
+            <a href="#savings" class="btn btn-primary">See Your Savings</a>
+            <a href="#how-it-works" class="btn btn-secondary">How It Works</a>
+        </div>
     </section>
 
-    <!-- Mission Section -->
-    <section id="mission" class="mission">
-        <h2>Our Mission</h2>
-        <p class="section-intro">We're expanding access to clean energy for working-class homeowners—teachers, nurses, factory workers, and service professionals who are often turned away by traditional solar financing but need energy savings the most.</p>
-        
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-number">20%+</div>
-                <div class="stat-label">Guaranteed First-Year Savings</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">54%</div>
-                <div class="stat-label">Increase in Total Addressable Market</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">30M</div>
-                <div class="stat-label">Working-Class Households We Can Serve</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">$0</div>
-                <div class="stat-label">Upfront Costs for Homeowners</div>
+    <!-- Secondary Tagline -->
+    <section class="tagline-section">
+        <h2>Powering Savings. Financing the Future.</h2>
+        <p>Clean energy should lower your bills — not raise them. And it should be accessible to every homeowner, not just the financially perfect ones.</p>
+        <p><strong>Sunrise Financial exists to change the model.</strong></p>
+    </section>
+
+    <!-- Value Propositions -->
+    <section class="value-props">
+        <div class="value-props-container">
+            <h2>Savings. Simplicity. Stability.</h2>
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">✓</div>
+                    <h3>Savings-Based Approval</h3>
+                    <p>No FICO. No income verification. No debt-to-income check. If we can save you money, you're in.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">💰</div>
+                    <h3>Guaranteed First-Year Savings</h3>
+                    <p>Your combined solar + utility cost will be lower than your current bill.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🛡️</div>
+                    <h3>25 Years of Full Protection</h3>
+                    <p>Monitoring, maintenance, repairs, insurance — Sunrise Financial covers it all.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">📊</div>
+                    <h3>Technology You Can Trust</h3>
+                    <p>Track monthly savings, system performance, and real-time energy insights.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works -->
-    <section id="how-it-works">
-        <h2>How It Works</h2>
-        <p class="section-intro">Our unique savings-based underwriting model focuses on energy bill savings and payment history—not traditional credit requirements.</p>
-        
-        <div class="steps">
-            <div class="step">
-                <div class="step-icon">📱</div>
-                <h3>Apply in Minutes</h3>
-                <p>Simple application process focused on utility payment history and guaranteed savings—no prime FICO score required.</p>
-            </div>
-            <div class="step">
-                <div class="step-icon">✓</div>
-                <h3>Get Approved</h3>
-                <p>Our AI-driven underwriting reviews your utility bills and calculates your guaranteed savings in days, not weeks.</p>
-            </div>
-            <div class="step">
-                <div class="step-icon">⚡</div>
-                <h3>Installation by Local Partners</h3>
-                <p>Trusted local solar installers handle the entire installation process with expertise in your community.</p>
-            </div>
-            <div class="step">
-                <div class="step-icon">💵</div>
-                <h3>Start Saving</h3>
-                <p>Begin enjoying minimum 20% energy bill savings from day one—putting money back in your family's budget.</p>
-            </div>
+    <!-- Why Sunrise Financial -->
+    <section class="why-sunrise">
+        <div class="why-sunrise-container">
+            <h2>Why Sunrise Financial?</h2>
+            <p><strong>Sunrise Financial was built from experience — not theory.</strong></p>
+            <p>Our leadership team has financed more than <span class="emphasis">$1 billion in residential solar</span>, raised <span class="emphasis">$1.4 billion in clean-energy capital</span>, and scaled solar platforms to more than <span class="emphasis">200,000 customers</span>. We've seen what works, what fails, and what families actually need.</p>
+            <p><strong>We built Sunrise Financial to fix what's broken.</strong></p>
         </div>
     </section>
 
-    <!-- Benefits -->
-    <section id="benefits" class="mission">
-        <h2>Real Impact on Family Budgets</h2>
-        <p class="section-intro">For working-class families earning around $40,000 annually, $600+ in annual energy savings represents a 33% increase in disposable income—enabling access to essentials they couldn't previously afford.</p>
-        
-        <div class="benefits-grid">
-            <div class="benefit-card">
-                <div class="benefit-icon">📚</div>
-                <h3>School Supplies</h3>
-                <p>Help kids succeed with materials and resources</p>
+    <!-- Simple 3-Step Process -->
+    <section class="steps-section" id="how-it-works">
+        <div class="steps-container">
+            <h2>Simple 3-Step Process</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Savings Review</h3>
+                    <p>Send us your utility bill. In minutes, we calculate your savings.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Installation & Activation</h3>
+                    <p>We handle design, permitting, installation, inspections, and activation.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Start Saving</h3>
+                    <p>Your bill drops from month one — guaranteed.</p>
+                </div>
             </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">🏠</div>
-                <h3>Home Improvements</h3>
-                <p>Make necessary repairs and upgrades</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">🏥</div>
-                <h3>Healthcare</h3>
-                <p>Cover emergency medical expenses</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">✈️</div>
-                <h3>Family Time</h3>
-                <p>Create memories with vacations and outings</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">🎁</div>
-                <h3>Gifts & Celebrations</h3>
-                <p>Provide for loved ones on special occasions</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">👕</div>
-                <h3>Essential Needs</h3>
-                <p>Buy clothing and daily necessities</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Get Started Today</h2>
-        <p class="section-intro">Whether you're a homeowner looking for guaranteed energy savings or a solar installer seeking financing solutions, we're here to help.</p>
-        
-        <div class="contact-info">
-            <div class="contact-item">
-                <div style="font-size: 2rem;">📧</div>
-                <strong>Email</strong>
-                <a href="mailto:info@sunrisefinancial.com">info@sunrisefinancial.com</a>
-            </div>
-            <div class="contact-item">
-                <div style="font-size: 2rem;">📞</div>
-                <strong>Phone</strong>
-                <a href="tel:1-800-SUNRISE">1-800-SUNRISE</a>
-            </div>
-            <div class="contact-item">
-                <div style="font-size: 2rem;">📍</div>
-                <strong>Office</strong>
-                <span>Serving communities nationwide</span>
-            </div>
-        </div>
-
-        <div style="margin-top: 3rem;">
-            <a href="mailto:info@sunrisefinancial.com" class="btn btn-primary">Contact Us</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
         <p>&copy; 2025 Sunrise Financial, LLC. All rights reserved.</p>
         <p style="margin-top: 1rem;">Energy Savings for Every Family</p>
     </footer>
