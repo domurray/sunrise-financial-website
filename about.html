@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sunrise Financial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header/Navigation */
+        .site-header {
+            background: white;
+            padding: 1rem 5%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #006937;
+            letter-spacing: 1px;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .main-nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .main-nav a:hover {
+            color: #006937;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #006937 0%, #004d27 100%);
+            color: white;
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Mission Section */
+        .mission-section {
+            padding: 4rem 5%;
+            background: white;
+            text-align: center;
+        }
+
+        .mission-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .mission-section h2 {
+            color: #006937;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .mission-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Experience Section */
+        .experience-section {
+            background: #f9f9f9;
+            padding: 4rem 5%;
+        }
+
+        .experience-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .experience-section h2 {
+            color: #006937;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .experience-stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #D0AF21;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        /* Leadership Section */
+        .leadership-section {
+            padding: 4rem 5%;
+            background: white;
+        }
+
+        .leadership-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .leadership-section h2 {
+            color: #006937;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .leader-card {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: #f9f9f9;
+            border-radius: 10px;
+            border-left: 4px solid #D0AF21;
+        }
+
+        .leader-photo {
+            width: 250px;
+            height: 250px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 1rem;
+        }
+
+        .leader-info h3 {
+            color: #006937;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .leader-title {
+            color: #D0AF21;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .leader-bio {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .leader-principle {
+            color: #006937;
+            font-weight: 600;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: #004d27;
+            color: white;
+            padding: 1.5rem 5%;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-bottom {
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            margin: 0.25rem 0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .main-nav {
+                gap: 1rem;
+            }
+
+            .main-nav a {
+                font-size: 0.9rem;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+
+            .leader-card {
+                grid-template-columns: 1fr;
+            }
+
+            .leader-photo {
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-nav {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .page-header p {
+                font-size: 1.1rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .leader-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="site-header">
+        <div class="header-content">
+            <div class="logo-text">SUNRISE FINANCIAL</div>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="why-sunrise.html">Why Sunrise Financial</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>About Sunrise Financial</h1>
+        <p>Built from experience — not theory.</p>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="mission-container">
+            <h2>Our Mission</h2>
+            <p><strong>Energy Savings for Every Family.</strong></p>
+            <p>Sunrise Financial brings affordable solar to homeowners who have been shut out by traditional lenders due to low income, limited credit, or nonstandard financial situations.</p>
+            <p>We believe clean energy should improve a family's financial stability, not depend on it.</p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience-section">
+        <div class="experience-container">
+            <h2>Built From Experience, Not Theory</h2>
+            <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;">Our team has decades of proven success in residential solar and clean energy financing.</p>
+            <div class="experience-grid">
+                <div class="experience-stat">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Years of Combined Experience</div>
+                </div>
+                <div class="experience-stat">
+                    <div class="stat-number">$1B+</div>
+                    <div class="stat-label">Solar Assets Financed</div>
+                </div>
+                <div class="experience-stat">
+                    <div class="stat-number">$1.4B+</div>
+                    <div class="stat-label">Clean-Energy Capital Raised</div>
+                </div>
+                <div class="experience-stat">
+                    <div class="stat-number">200K+</div>
+                    <div class="stat-label">Customers Served</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="leadership-section">
+        <div class="leadership-container">
+            <h2>Leadership Team</h2>
+
+            <!-- Thomas Neyhart -->
+            <div class="leader-card">
+                <div class="leader-photo">[Photo: Thomas Neyhart]</div>
+                <div class="leader-info">
+                    <h3>Thomas A. Neyhart</h3>
+                    <div class="leader-title">Chief Executive Officer</div>
+                    <p class="leader-bio">Thomas Neyhart is a nationally recognized clean-energy entrepreneur with more than two decades of leadership in residential solar, financing, and energy-efficiency access. He has helped finance over $1 billion in solar installations and raised more than $1.4 billion in investment capital to expand affordable solar to tens of thousands of working families.</p>
+                    <p class="leader-bio">He was named a Goldman Sachs Top 100 Entrepreneur and is widely known for pioneering programs focused on low-to-moderate-income (LMI) households.</p>
+                    <p class="leader-principle">Guiding Principle: Energy Savings for Every Family.</p>
+                </div>
+            </div>
+
+            <!-- Reid Garton -->
+            <div class="leader-card">
+                <div class="leader-photo">[Photo: Reid Garton]</div>
+                <div class="leader-info">
+                    <h3>Reid Garton</h3>
+                    <div class="leader-title">Chief Strategy Officer</div>
+                    <p class="leader-bio">Reid Garton leads corporate strategy, analytics, data systems, and market expansion. He previously helped scale a national clean-energy platform to more than 200,000 customers across 14 states, building the data-driven infrastructure required for large-scale, sustainable growth.</p>
+                    <p class="leader-bio">Reid ensures Sunrise Financial stays aligned with its mission while deploying technology and strategy that maximize impact and profitability.</p>
+                </div>
+            </div>
+
+            <!-- Lisa Neyhart -->
+            <div class="leader-card">
+                <div class="leader-photo">[Photo: Lisa Neyhart]</div>
+                <div class="leader-info">
+                    <h3>Lisa Neyhart</h3>
+                    <div class="leader-title">Chief Experience Officer</div>
+                    <p class="leader-bio">Lisa Neyhart oversees the full customer journey — from first conversation to 25 years of service. She has grown solar lease portfolios from 3,000 to over 30,000 homeowners, leading large customer-care and operations teams that consistently delivered savings, education, and exceptional customer support.</p>
+                    <p class="leader-bio">She is known across the energy industry for championing LMI-focused outreach and real, measurable customer benefit.</p>
+                </div>
+            </div>
+
+            <!-- Jennifer Pearce -->
+            <div class="leader-card">
+                <div class="leader-photo">[Photo: Jennifer Pearce]</div>
+                <div class="leader-info">
+                    <h3>Jennifer Pearce</h3>
+                    <div class="leader-title">Chief Operating Officer</div>
+                    <p class="leader-bio">With more than 20 years of clean-energy leadership, Jennifer Pearce has driven operational structures that improve cycle times, reduce soft costs, increase customer satisfaction, and support multi-state growth.</p>
+                    <p class="leader-bio">She has led organizations of more than 3,000 staff members, executed cost reductions of over 30%, and delivered sustained year-over-year growth. Jennifer ensures Sunrise Financial's operations stay fast, reliable, and customer-focused.</p>
+                </div>
+            </div>
+
+            <!-- Daniel Murray -->
+            <div class="leader-card">
+                <div class="leader-photo">[Photo: Daniel Murray]</div>
+                <div class="leader-info">
+                    <h3>Daniel Murray</h3>
+                    <div class="leader-title">Chief Technology Officer</div>
+                    <p class="leader-bio">Daniel Murray leads Sunrise Financial's technology architecture, platform development, and innovation roadmap. His work enables end-to-end system transparency, real-time savings data, production monitoring, underwriting automation, partner tools, and portfolio performance optimization.</p>
+                    <p class="leader-bio">Daniel ensures that Sunrise Financial's platform supports scalable, data-driven growth and keeps families informed every month.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sunrise Financial, LLC. All rights reserved.</p>
+                <p><strong>Energy Savings for Every Family</strong></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
