@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Sunrise Financial - Energy Savings for Every Family</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header/Navigation */
+        .site-header {
+            background: white;
+            padding: 1rem 5%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #006937;
+            letter-spacing: 1px;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .main-nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .main-nav a:hover {
+            color: #006937;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #006937 0%, #004d27 100%);
+            color: white;
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Reason Sections */
+        .reason-section {
+            padding: 4rem 5%;
+        }
+
+        .reason-section:nth-child(odd) {
+            background: white;
+        }
+
+        .reason-section:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .reason-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .reason-number {
+            display: inline-block;
+            background: #D0AF21;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .reason-section h2 {
+            color: #006937;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .reason-section p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .reason-section ul {
+            margin: 1.5rem 0 1.5rem 2rem;
+        }
+
+        .reason-section li {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+        }
+
+        .highlight-box {
+            background: #006937;
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            font-size: 1.2rem;
+            margin: 0;
+            text-align: center;
+        }
+
+        /* Benefits List */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .benefit-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #D0AF21;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .benefit-item h3 {
+            color: #006937;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-item p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #006937 0%, #004d27 100%);
+            color: white;
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: #D0AF21;
+            color: #004d27;
+        }
+
+        .btn-primary:hover {
+            background: #b89a1d;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .site-footer {
+            background: #004d27;
+            color: white;
+            padding: 1.5rem 5%;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-bottom {
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            margin: 0.25rem 0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .main-nav {
+                gap: 1rem;
+            }
+
+            .main-nav a {
+                font-size: 0.9rem;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-nav {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .page-header p {
+                font-size: 1.1rem;
+            }
+
+            .reason-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="site-header">
+        <div class="header-content">
+            <div class="logo-text">SUNRISE FINANCIAL</div>
+            <nav class="main-nav">
+                <a href="/">Home</a>
+                <a href="/why-sunrise/">Why Sunrise Financial</a>
+                <a href="/how-it-works/">How It Works</a>
+                <a href="/about-us/">About Us</a>
+                <a href="/contact/">Contact</a>
+            </nav>
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Why Sunrise Financial?</h1>
+        <p>Solar should save you money — and be accessible to everyone.</p>
+    </section>
+
+    <!-- Reason 1 -->
+    <section class="reason-section">
+        <div class="reason-container">
+            <div class="reason-number">1</div>
+            <h2>Because Solar Should Save You Money — Starting Now</h2>
+            <p>Sunrise Financial guarantees first-year savings. No exceptions.</p>
+            <p>Your solar lease is designed so that your combined electricity cost — solar + remaining utility — is lower than your current bill from the first month.</p>
+            <div class="highlight-box">
+                <p><strong>If you don't save money in your first year, we make it right.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reason 2 -->
+    <section class="reason-section">
+        <div class="reason-container">
+            <div class="reason-number">2</div>
+            <h2>Because We Approve Homeowners Others Reject</h2>
+            <p>Families are often turned away from solar due to:</p>
+            <ul>
+                <li>Low credit scores</li>
+                <li>Thin or no credit history</li>
+                <li>Nontraditional income</li>
+                <li>Higher-than-average utility usage</li>
+                <li>Debt-to-income ratios</li>
+            </ul>
+            <p><strong>Sunrise Financial removes these barriers.</strong></p>
+            <div class="highlight-box">
+                <p>If your home qualifies for energy savings, you qualify.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reason 3 -->
+    <section class="reason-section">
+        <div class="reason-container">
+            <div class="reason-number">3</div>
+            <h2>Because Full Service = Zero Stress</h2>
+            <p>Everything is included for 25 years:</p>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h3>Monitoring</h3>
+                    <p>24/7 system performance tracking</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Maintenance</h3>
+                    <p>Regular upkeep and optimization</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Repairs</h3>
+                    <p>All repairs covered at no cost</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Equipment Replacements</h3>
+                    <p>Inverters, panels, and more</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Insurance</h3>
+                    <p>Full coverage for your system</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Roof Protection</h3>
+                    <p>Your roof stays protected</p>
+                </div>
+            </div>
+            <p style="margin-top: 2rem; text-align: center; font-size: 1.2rem;"><strong>No repair bills. No service fees. No surprise costs.</strong></p>
+        </div>
+    </section>
+
+    <!-- Reason 4 -->
+    <section class="reason-section">
+        <div class="reason-container">
+            <div class="reason-number">4</div>
+            <h2>Because You See Your Savings Every Month</h2>
+            <p>Our technology gives homeowners:</p>
+            <ul>
+                <li>Real-time panel and system performance</li>
+                <li>Monthly usage vs. production</li>
+                <li>Actual savings for every billing cycle</li>
+                <li>Alerts, updates, and maintenance notifications</li>
+            </ul>
+            <p><strong>Transparency you can trust.</strong></p>
+        </div>
+    </section>
+
+    <!-- Reason 5 -->
+    <section class="reason-section">
+        <div class="reason-container">
+            <div class="reason-number">5</div>
+            <h2>Because Sunrise Is Built for the Next Decade</h2>
+            <p>Policy, pricing, and demand have aligned to create the strongest residential solar environment in U.S. history.</p>
+            <p>Sunrise Financial is positioned with:</p>
+            <ul>
+                <li>Long-term Safe Harbor strategy</li>
+                <li>Lease availability through 2030</li>
+                <li>Stable economics</li>
+                <li>Portfolio durability</li>
+                <li>Performance optimization tools</li>
+                <li>High customer satisfaction pathways</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Start Saving?</h2>
+        <p>See how much Sunrise Financial can save your family on energy costs.</p>
+        <a href="/contact/" class="btn btn-primary">Contact Us Today</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sunrise Financial, LLC. All rights reserved.</p>
+                <p><strong>Energy Savings for Every Family</strong></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
