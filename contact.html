@@ -33,6 +33,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
         }
 
         .logo-text {
@@ -251,6 +252,19 @@
         @media (max-width: 768px) {
             .main-nav {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+
+            .main-nav a {
+                padding: 0.75rem;
+                border-bottom: 1px solid #eee;
             }
 
             .mobile-menu-toggle {
@@ -375,5 +389,17 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            const nav = document.querySelector('.main-nav');
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+            }
+        });
+    </script>
 </body>
 </html>
